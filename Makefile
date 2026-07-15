@@ -1,6 +1,6 @@
 # Stub Makefile -- deliberately does NOT invoke Mill/Chisel. Only exists
 # to prove the CI/CD trigger/dispatch chain works mechanically, isolated
-# from real toolchain concerns.
+# from real toolchain concerns
 
 -include cd.config
 RTL_TARGET ?= rtl
