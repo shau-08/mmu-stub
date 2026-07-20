@@ -4,7 +4,7 @@ set -e
 if [ -f ./mill ]; then
   MILL_BIN=./mill
 else
-  MILL_BIN=playground/mill
+  MILL_BIN=../playground/mill
 fi
 
 # Auto-detect this repo's top-level Mill project name from its own
@@ -23,7 +23,7 @@ if [ -z "$PROJECT" ]; then
 fi
 
 echo "Running lint check before push (project=$PROJECT)..."
-make -f playground/Makefile.include lint project="$PROJECT" MILL="$MILL_BIN"
+make -f ../playground/Makefile.include lint project="$PROJECT" MILL="$MILL_BIN"
 
 if ! git diff --exit-code --quiet; then
   echo ""
