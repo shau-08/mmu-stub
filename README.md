@@ -1,7 +1,7 @@
 # mmu
 
 Part of the `morphingmachines` hardware design org. This repo is one of the
-CI/CD-wired dependencies consumed by [`RedefineIp`](https://github.com/morphingmachines/RedefineIp)
+CI/CD-wired dependencies consumed by [`RedefineIp`].(https://github.com/morphingmachines/RedefineIp)
 under `dependencies/`.
 
 ## What's in here, CI/CD-wise
