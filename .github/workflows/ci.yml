@@ -1,6 +1,0 @@
-name: CI
-on: [push, pull_request]
-jobs:
-  ci:
-    uses: shau-08/CICD/.github/workflows/reusable-ci.yml@main
-    secrets: inherit
