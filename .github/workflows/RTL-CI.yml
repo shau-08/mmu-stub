@@ -1,0 +1,6 @@
+on: [push, pull_request]
+
+jobs:
+  ci:
+    uses: shau-08/CICD/.github/workflows/Reusable-RTL-CI.yml@main
+    secrets: inherit

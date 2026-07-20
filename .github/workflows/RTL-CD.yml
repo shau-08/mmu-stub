@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Release tag (leave blank to auto-generate <repo>-<branch>-<date>-<sha>); only an explicit tag here triggers a downstream RedefineIp rebuild'
+        required: false
+        type: string
+
+jobs:
+  cd:
+    permissions:
+      contents: write
+    uses: shau-08/CICD/.github/workflows/Reusable-RTL-CD.yml@main
+    with:
+      tag_name: ${{ inputs.tag_name }}
+      build_output_path: generated_sv_dir
+      notify_repo: morphingmachines/RedefineIp  # CONFIRM: matches .gitmodules org, but verify this is the real GitHub slug before relying on it
+    secrets: inherit
